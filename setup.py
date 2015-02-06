@@ -19,15 +19,16 @@ tests_require = [
 
 install_requires = [
     'sentry>=6.0.0',
+    'requests'
 ]
 
 setup(
-    name='sentry-hipchat',
-    version='0.6.0',
-    author='Xavier Ordoquy',
-    author_email='xordoquy@linovia.com',
-    url='http://github.com/linovia/sentry-hipchat',
-    description='A Sentry extension which integrates with Hipchat.',
+    name='sentry-insights',
+    version='0.1.0',
+    author='Boris Feld',
+    author_email='boris.feld@tinyclues.com',
+    url='http://github.com/tinyclues/sentry-insights',
+    description='A Sentry extension which integrates with New Relic Insights.',
     long_description=__doc__,
     license='BSD',
     packages=find_packages(exclude=['tests']),
@@ -39,11 +40,11 @@ setup(
     include_package_data=True,
     entry_points={
         'sentry.apps': [
-            'sentry_hipchat = sentry_hipchat ',
+            'sentry_insights = sentry_insights ',
         ],
         'sentry.plugins': [
-            'hipchat = sentry_hipchat.models:HipchatMessage',
-         ],
+            'insights = sentry_insights.models:InsightsMessage',
+        ],
     },
     classifiers=[
         'Framework :: Django',
