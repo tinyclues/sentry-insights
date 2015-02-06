@@ -85,7 +85,7 @@ class InsightsMessage(NotifyPlugin):
 
     def send_payload(self, account_id, key, event_type, alert):
 
-        endpoint = DEFAULT_ENDPOINT.format(account_id)
+        endpoint = DEFAULT_ENDPOINT.format(account_id=account_id)
 
         values = {
             'eventType': event_type,
