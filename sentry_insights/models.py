@@ -12,7 +12,7 @@ from django.conf import settings
 
 from sentry.plugins.bases.notify import NotifyPlugin
 
-import sentry_hipchat
+import sentry_insights
 
 import requests
 import json
@@ -31,7 +31,7 @@ class InsightsOptionsForm(forms.Form):
 class InsightsMessage(NotifyPlugin):
     author = 'Boris Feld'
     author_url = 'https://github.com/tinyclues/sentry-insights'
-    version = sentry_hipchat.VERSION
+    version = sentry_insights.VERSION
     description = "Event notification to Insights."
     resource_links = [
         ('Bug Tracker', 'https://github.com/tinyclues/sentry-insights/issues'),
