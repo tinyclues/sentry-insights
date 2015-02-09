@@ -47,10 +47,10 @@ class InsightsMessage(NotifyPlugin):
         return all((self.get_option(k, project) for k in ('account_id', 'key', 'event_type')))
 
     def should_notify(self, group, event):
-        if group.is_muted():
-            return False
-
         return True
+
+    def post_process(self, group, event, is_new, is_sample, **kwargs):
+        self.notify_users(group, event)
 
     def notify_users(self, group, event, fail_silently=False):
         project = event.project
