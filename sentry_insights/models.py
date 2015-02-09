@@ -68,10 +68,14 @@ class InsightsMessage(NotifyPlugin):
 
         values = {
             'eventType': event_type,
-            'level': level
+            'level': level,
+            'project_name': alert.project.name,
+            'platform': alert.project.platform,
+            'event_id': alert.event_id
         }
 
-        values.update(alert.__dict__)
+        tags = dict(alert.get_tags(False))
+        values.update(tags)
 
         headers = {'content-type': 'application/json',
                    'X-Insert-Key': key}
