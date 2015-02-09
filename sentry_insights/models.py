@@ -74,7 +74,7 @@ class InsightsMessage(NotifyPlugin):
             'event_id': alert.event_id
         }
 
-        tags = dict(alert.get_tags(False))
+        tags = dict(alert.get_tags())
         values.update(tags)
 
         headers = {'content-type': 'application/json',
