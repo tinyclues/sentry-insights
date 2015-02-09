@@ -7,6 +7,7 @@ An extension for Sentry which integrates with Hipchat. It will forwards
 notifications to an hipchat room.
 
 :copyright: (c) 2011 by the Linovia, see AUTHORS for more details.
+:copyright: (c) 2014 by tinyclues, see AUTHORS for more details.
 :license: BSD, see LICENSE for more details.
 """
 from setuptools import setup, find_packages
