@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 """
-sentry-hipchat
-==============
+sentry-insights
+===============
 
-An extension for Sentry which integrates with Hipchat. It will forwards
-notifications to an hipchat room.
+An extension for Sentry which integrates with Insights.
+It will send issues notification to Insights with every tag.
+It's based on sentry-hipchat plugin.
 
 :copyright: (c) 2011 by the Linovia, see AUTHORS for more details.
 :copyright: (c) 2014 by tinyclues, see AUTHORS for more details.
