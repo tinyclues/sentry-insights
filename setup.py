@@ -26,7 +26,7 @@ install_requires = [
 
 setup(
     name='sentry-insights',
-    version='0.1.0',
+    version='0.1.1',
     author='Boris Feld',
     author_email='boris.feld@tinyclues.com',
     url='http://github.com/tinyclues/sentry-insights',
