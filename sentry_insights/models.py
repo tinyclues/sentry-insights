@@ -72,7 +72,8 @@ class InsightsMessage(NotifyPlugin):
             'project_name': alert.project.name,
             'platform': alert.project.platform,
             'event_id': alert.event_id,
-            'group_id': alert.group.id
+            'group_id': alert.group.id,
+            'short_message': alert.group.message_short
         }
 
         tags = dict(alert.get_tags())
